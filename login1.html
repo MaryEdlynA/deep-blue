@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5dc;
+    }
+
+    .container {
+      width: 350px;
+      background: #f1f1d9;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+    }
+
+    .form-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2d5932;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .password-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2d5932;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1f4025;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="image-section">
+      <img src="https://plus.unsplash.com/premium_photo-1676968002767-1f6a09891350?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background">
+    </div>
+    <div class="form-section">
+      <h2>welcome back !</h2>
+      <form>
+        <div class="input-group">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-group password-container">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button type="submit">LOGIN</button>
+        <p>Not a member? <a href="#">Register now</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
